@@ -1,0 +1,98 @@
+.screen-component {
+  /* Common styles */ }
+  .screen-component .page {
+    margin: 50px;
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    max-width: 700px;
+    height: 700px; }
+  .screen-component .slack-message-box {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    max-width: 300px; }
+  .screen-component .redis-alert-box {
+    padding: 10px;
+    background-color: #FAA;
+    border: 1px solid #000; }
+  .screen-component .width-50 {
+    width: 50px; }
+  .screen-component .width-100 {
+    width: 100px; }
+  .screen-component .width-150 {
+    width: 150px; }
+  .screen-component .width-200 {
+    width: 200px; }
+  .screen-component .width-250 {
+    width: 250px; }
+  .screen-component .width-300 {
+    width: 300px; }
+  .screen-component .width-350 {
+    width: 350px; }
+  .screen-component .width-400 {
+    width: 400px; }
+  .screen-component .width-450 {
+    width: 450px; }
+  .screen-component .width-500 {
+    width: 500px; }
+  .screen-component .width-550 {
+    width: 550px; }
+  .screen-component .width-600 {
+    width: 600px; }
+  .screen-component .width-650 {
+    width: 650px; }
+  .screen-component .width-700 {
+    width: 700px; }
+  .screen-component .width-750 {
+    width: 750px; }
+  .screen-component .width-800 {
+    width: 800px; }
+  .screen-component .width-850 {
+    width: 850px; }
+  .screen-component .width-900 {
+    width: 900px; }
+  .screen-component .width-950 {
+    width: 950px; }
+  .screen-component .width-1000 {
+    width: 1000px; }
+  .screen-component .height-50 {
+    height: 50px; }
+  .screen-component .height-100 {
+    height: 100px; }
+  .screen-component .height-150 {
+    height: 150px; }
+  .screen-component .height-200 {
+    height: 200px; }
+  .screen-component .height-250 {
+    height: 250px; }
+  .screen-component .height-300 {
+    height: 300px; }
+  .screen-component .height-350 {
+    height: 350px; }
+  .screen-component .height-400 {
+    height: 400px; }
+  .screen-component .height-450 {
+    height: 450px; }
+  .screen-component .height-500 {
+    height: 500px; }
+  .screen-component .height-550 {
+    height: 550px; }
+  .screen-component .height-600 {
+    height: 600px; }
+  .screen-component .height-650 {
+    height: 650px; }
+  .screen-component .height-700 {
+    height: 700px; }
+  .screen-component .height-750 {
+    height: 750px; }
+  .screen-component .height-800 {
+    height: 800px; }
+  .screen-component .height-850 {
+    height: 850px; }
+  .screen-component .height-900 {
+    height: 900px; }
+  .screen-component .height-950 {
+    height: 950px; }
+  .screen-component .height-1000 {
+    height: 1000px; }
