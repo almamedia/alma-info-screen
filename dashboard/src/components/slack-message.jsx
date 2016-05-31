@@ -9,12 +9,18 @@ export default class SlackMessage extends React.Component {
       current_message: "Lähetä viesti komennolla: !info [viesti]"
     };
   }
-  
+
   componentWillMount() {
     this.props.firebase_db.ref('/component_data/-KJ0DIhYZD0CYJiWjbhV/0/data/current_message').on('value', function(data) {
-      this.setState({
-        current_message: data.val()
-      });
+      if (data.val() != undefined) {
+        this.setState({
+          current_message: data.val()
+        });
+      } else {
+        this.setState({
+          current_message: "Lähetä viesti komennolla: !info [viesti]"
+        });
+      }
     }.bind(this));
   }
 

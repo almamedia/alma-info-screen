@@ -9,8 +9,8 @@ import reactMixin from 'react-mixin';
 
 
 export default class Screen extends React.Component {
-
-  render() {
+  constructor(props) {
+    super(props);
     var config = {
       apiKey: "AIzaSyBtDpdPlcbb-G5iAtZZOKjMyAKRVjh3l70",
       authDomain: "il-info-screen.firebaseapp.com",
@@ -18,11 +18,32 @@ export default class Screen extends React.Component {
       storageBucket: "il-info-screen.appspot.com",
     };
     Firebase.initializeApp(config);
-    var database = Firebase.database();
+    this.database = Firebase.database();
+    this.render = this.render.bind(this);
+    this.state = {
+      pages: []
+    };
+  }
+
+  componentWillMount() {
+    this.database.ref('/page_config/pages').on('value', function(data) {
+      var page_array = [];
+      if (data.val() != undefined) {
+        Object.keys(data.val()).map(function(page, i) {
+          page_array.push(data.val()[page]);
+        }.bind(this));
+      }
+      this.setState({
+        pages: page_array
+      });
+    }.bind(this));
+  }
+
+  render() {
     return (
       <OwlCarousel singleItem autoPlay={300000} >
-        {Object.keys(this.props.config.data.page_config.pages).map(function(page, i) {
-          return <Page key={i} config={this.props.config.data.page_config.pages[page]} firebase_db={database}/>
+        {this.state.pages.map(function(page_components, i) {
+          return <Page key={i} config={page_components} firebase_db={this.database}/>
         }.bind(this))}
       </OwlCarousel>
     );

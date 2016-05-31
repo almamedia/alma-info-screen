@@ -43,7 +43,7 @@ class ConfigController < ApplicationController
       {
         name: "SlackMessage",
         data: {
-          current_message: ''
+          current_message: 'Testi viesti'
         }
       },
       {

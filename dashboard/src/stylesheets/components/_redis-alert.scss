@@ -1,5 +1,12 @@
 .redis-alert-box {
+  margin: 10px;
   padding: 10px;
-  background-color: #FAA;
-  border: 1px solid #000;
+  border: 5px solid #FF956D;
+  min-height: 60px;
+  max-width: 50%;
+  font-size: 70px;
+  color: #1F1F1F;
+  font-family: 'Roboto', sans-serif;
+  background: url('../images/fire_icon.png') #FF7E23 no-repeat;
+  background-position: 101% -30px;
 }
