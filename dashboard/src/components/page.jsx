@@ -11,7 +11,6 @@ const pageComponentList = {
 };
 
 export default class Page extends React.Component {
-
   render() {
     var styleClass = classnames({'page': true});
     var activeComponents = [];

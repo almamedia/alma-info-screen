@@ -11,16 +11,14 @@ export default class SlackMessage extends React.Component {
   }
 
   componentWillMount() {
-    this.props.firebase_db.ref('/component_data/-KJ0DIhYZD0CYJiWjbhV/0/data/current_message').on('value', function(data) {
-      if (data.val() != undefined) {
-        this.setState({
-          current_message: data.val()
-        });
-      } else {
-        this.setState({
-          current_message: "Lähetä viesti komennolla: !info [viesti]"
-        });
-      }
+    this.props.firebase_db.ref('/component_data').on('value', function(data) {
+      data.val()[Object.keys(data.val())[0]].map(function(component_data, i) {
+        if (component_data.name == this.constructor.name) {
+          this.setState({
+            current_message: (component_data.data.current_message ? component_data.data.current_message : "Lähetä viesti komennolla: !info [viesti]")
+          });
+        }
+      }.bind(this));
     }.bind(this));
   }
 
