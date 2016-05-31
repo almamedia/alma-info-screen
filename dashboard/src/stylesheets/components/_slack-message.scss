@@ -1,6 +1,10 @@
 .slack-message-box {
+  margin: 10px;
   padding: 10px;
-  background-color: #eee;
-  border: 1px solid #ddd;
-  max-width: 300px;
+  background-color: #58EECB;
+  border: 5px solid #9DFFE4;
+  min-height: 60px;
+  max-width: 50%;
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;
 }

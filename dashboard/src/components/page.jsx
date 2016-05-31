@@ -11,18 +11,18 @@ const pageComponentList = {
 };
 
 export default class Page extends React.Component {
-  
+
   render() {
     var styleClass = classnames({'page': true});
     var activeComponents = [];
-    this.props.config.components.map(function(component) {
+    this.props.config.map(function(component) {
       activeComponents.push({id: pageComponentList[component.name], config: component});
     });
     return (
       <div className={styleClass}>
         {activeComponents.map(function(Component, i) {
-          return <Component.id key={i} config={Component.config} />
-        })}
+          return <Component.id key={i} config={Component.config} firebase_db={this.props.firebase_db} />
+        }.bind(this))}
       </div>
     );
   }

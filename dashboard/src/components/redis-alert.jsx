@@ -14,12 +14,12 @@ export default class RedisAlert extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://stripe-dev.iltalehti.fi/api/v2/products')
+    /*axios.get('https://stripe-dev.iltalehti.fi/api/v2/products')
     .then(function (response) {
       this.setState({
           product_name: response.data.products[0].name
       });
-    }.bind(this));
+    }.bind(this));*/
   }
 
   render() {
