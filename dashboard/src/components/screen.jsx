@@ -2,11 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import $ from 'jquery';
 import OwlCarousel from 'react-owl-carousel';
-import Page from "./page";
-import ReactFireMixin from 'reactfire';
 import Firebase from 'firebase';
-import reactMixin from 'react-mixin';
-
+import Page from "./page";
 
 export default class Screen extends React.Component {
   constructor(props) {
