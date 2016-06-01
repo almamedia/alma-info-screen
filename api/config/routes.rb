@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   resources :component
   resources :componentdata
 
+  get '/componentdata/:name', to: 'componentdata#show'
+  patch '/componentdata', to: 'componentdata#update'
+
+  patch '/component', to: 'component#update'
+  delete '/component', to: 'component#destroy'
+
 end

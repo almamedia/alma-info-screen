@@ -42,8 +42,8 @@ export default class Screen extends React.Component {
   render() {
     return (
       <OwlCarousel singleItem autoPlay={300000} >
-        {this.state.pages.map(function(page_components, i) {
-          return <Page key={i} config={page_components} firebase_db={this.database}/>
+        {this.state.pages.map(function(page_data, i) {
+          return <Page key={i} config={page_data} firebase_db={this.database}/>
         }.bind(this))}
       </OwlCarousel>
     );

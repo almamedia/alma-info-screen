@@ -14,9 +14,9 @@ export default class Page extends React.Component {
   render() {
     var styleClass = classnames({'page': true});
     var activeComponents = [];
-    this.props.config.map(function(component) {
-      activeComponents.push({id: pageComponentList[component.name], config: component});
-    });
+    Object.keys(this.props.config.components).map(function(component, i) {
+      activeComponents.push({id: pageComponentList[this.props.config.components[component].name], config: this.props.config.components[component]});
+    }.bind(this));
     return (
       <div className={styleClass}>
         {activeComponents.map(function(Component, i) {

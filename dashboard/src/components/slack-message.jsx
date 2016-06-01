@@ -9,7 +9,7 @@ export default class SlackMessage extends React.Component {
       current_message: "Lähetä viesti komennolla: !info [viesti]"
     };
   }
-
+  
   componentWillMount() {
     this.props.firebase_db.ref('/component_data').on('value', function(data) {
       data.val()[Object.keys(data.val())[0]].map(function(component_data, i) {
