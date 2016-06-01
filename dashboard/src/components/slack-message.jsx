@@ -23,7 +23,11 @@ export default class SlackMessage extends React.Component {
   }
 
   render() {
-    var styleClass = classnames({'slack-message-box': true});
+    var styleClass = classnames({'slack-message-box': true},
+                                {[`${this.props.config.float}`]: true},
+                                {[`width-${this.props.config.width}`]: true},
+                                {[`height-${this.props.config.height}`]: true}
+                               );
     return (
       <div className={styleClass}>
         {this.state.current_message}

@@ -4,6 +4,15 @@
 
 
 /* Common styles */
+.hidden {
+  visibility: hidden;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .width-50 {
   width: 50px;
 }

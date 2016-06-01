@@ -1,0 +1,11 @@
+test:
+  base_uri: 'https://il-info-screen.firebaseio.com'
+  secret: 'KY7HTxLVhKaIP9X12dqXLxcErGB0lzLjtsCH5W6b'
+
+development:
+  base_uri: 'https://il-info-screen.firebaseio.com'
+  secret: 'KY7HTxLVhKaIP9X12dqXLxcErGB0lzLjtsCH5W6b'
+
+production:
+  base_uri: 'https://il-info-screen.firebaseio.com'
+  secret: 'KY7HTxLVhKaIP9X12dqXLxcErGB0lzLjtsCH5W6b'
