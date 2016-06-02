@@ -1,14 +1,16 @@
-.slack-message-box {
+.viikkis-box {
   margin: 10px;
   padding: 10px;
-  border: 5px solid #9DFFE4;
+  border: 5px solid #AEFFA4;
   min-height: 60px;
   max-width: 50%;
   font-size: 100px;
+  text-align: center;
+  line-height: 250px;
   color: #1F1F1F;
   font-family: 'Roboto', sans-serif;
-  background: url('../images/slack_logo.png') #58EECB no-repeat;
-  background-position: 101% -30px;
+  background: url('../images/viikkotiedote_header.png') #D1FFA7 no-repeat;
+  background-position: 0px 0px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

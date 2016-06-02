@@ -3,10 +3,12 @@ import classnames from 'classnames';
 import $ from 'jquery';
 import SlackMessage from './slack-message';
 import RedisAlert from './redis-alert';
+import Viikkis from './viikkis';
 
 const pageComponentList = {
   SlackMessage,
-  RedisAlert
+  RedisAlert,
+  Viikkis
 };
 
 export default class Page extends React.Component {
