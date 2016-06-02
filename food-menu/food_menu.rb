@@ -39,7 +39,7 @@ class Restaurants
       entry = elem.xpath(".//text()").to_s.strip
       result[index + 1] = entry
     end
-    return result[@day]
+    return Array.new(1) {result[@day]}
   end
 
   def get_satkar
@@ -74,7 +74,7 @@ end
 def send_to_api(data)
   uri = URI.parse("http://localhost:3000/componentdata")
   req = Net::HTTP::Patch.new(uri)
-  req.set_form_data(:name => "FoodMenu", :data => data)
+  req.set_form_data(:name => "FoodMenus", :data => data)
 
   res = Net::HTTP.start(uri.hostname, uri.port) do |http|
     http.request(req)
