@@ -3,10 +3,13 @@ import classnames from 'classnames';
 import $ from 'jquery';
 import SlackMessage from './slack-message';
 import RedisAlert from './redis-alert';
+import FoodMenus from './food-menus';
+
 
 const pageComponentList = {
   SlackMessage,
-  RedisAlert
+  RedisAlert,
+  FoodMenus
 };
 
 export default class Page extends React.Component {
