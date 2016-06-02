@@ -7,8 +7,8 @@ var request = require('request');
 function send_to_infoscreen(text, bot_response) {
   var options = {
     method: 'PATCH',
-    url: "http://localhost:3000/componentdata/SlackMessages",
-    form: {name: "SlackMessages", data: {current_message: text}}
+    url: "http://localhost:3000/componentdata",
+    form: {name: "SlackMessage", data: JSON.stringify({current_message: text})}
   };
 
   var handleResponse = function(err, httpResponse, body) {
