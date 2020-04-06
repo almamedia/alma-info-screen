@@ -1,9 +1,19 @@
-# Info screen installer
+# Info screen
 Opens and refreshes web pages automatically on local or remote devices (OSX).
 
-# Prequisites:
+By default the pages are shown side-by-side and refreshed once per minute.
+
+Every one hour Chrome is rebooted.
+
+# Requirements
+## Remote machine:
 * Install Google Chrome
-* Install ad-blocker
+* Install Ublock origin
+* Setup SSH
+
+## Local:
+* Install git (should be included in OSX)
+* Clone repo: `git clone git@github.com:almamedia/alma-info-screen.git && cd alma-info-screen`
 
 # Setup
 To install run the following script (1-4 pages as parameters):
@@ -11,6 +21,7 @@ To install run the following script (1-4 pages as parameters):
 `./setup.sh https://example.com https://example2.com`
 
 The pages should pop up and start refreshing automatically.
+If the pages are not aligned correctly just drag them to the correct places.
 
 ## Remote setup
 
@@ -28,7 +39,7 @@ Use TIMER variable to set the refresh interval in minutes, if set to zero then n
 
 # After setup:
 * Accept cookies
-* Block any annoying elements on the page
+* Block any annoying elements on the page (right click -> block this element)
 
 # Uninstall
 
