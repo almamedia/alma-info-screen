@@ -33,3 +33,7 @@ Use TIMER variable to set the refresh interval in minutes, if set to zero then n
 # Uninstall
 
 `./uninstall.sh`
+
+or
+
+`TARGET=128.128.128.128 USER=exampleuser ./uninstall.sh`
