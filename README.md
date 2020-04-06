@@ -13,7 +13,8 @@ Every one hour Chrome is rebooted.
 
 ## Local:
 * Install git (should be included in OSX)
-* Clone repo: `git clone git@github.com:almamedia/alma-info-screen.git && cd alma-info-screen`
+* Clone repo: `git clone https://github.com/almamedia/alma-info-screen.git && cd alma-info-screen`
+* If already cloned, pull the latest changes: `git pull`
 
 # Setup
 To install run the following script (1-4 pages as parameters):
