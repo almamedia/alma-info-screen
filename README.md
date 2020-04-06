@@ -8,8 +8,8 @@ Every one hour Chrome is rebooted.
 # Requirements
 ## Remote machine:
 * Install Google Chrome
-* Install Ublock origin
 * Setup SSH
+* (Optional) Install Ublock origin
 
 ## Local:
 * Install git (should be included in OSX)
