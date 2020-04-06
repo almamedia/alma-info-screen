@@ -40,6 +40,7 @@ Use TIMER variable to set the refresh interval in minutes, if set to zero then n
 # After setup:
 * Accept cookies
 * Block any annoying elements on the page (right click -> block this element)
+* Set page size with CMD + or CMD - on the browser
 
 # Uninstall
 

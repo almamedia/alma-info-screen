@@ -3,7 +3,7 @@
 # Uninstall cron and files
 
 # Install location
-INSTALL_PATH="/Users/${USER}/alma-info-screen"
+INSTALL_PATH="/Users/${USER}/alma-info-screen-scripts"
 
 # If no target is set, install locally
 if [ -z "$TARGET" ]; then

@@ -3,7 +3,7 @@
 # Install browser refresh scripts for the provided urls
 
 # Install location
-INSTALL_PATH="/Users/${USER}/alma-info-screen"
+INSTALL_PATH="/Users/${USER}/alma-info-screen-scripts"
 # Pages to open, only one is required
 PAGE1=$1 PAGE2=$2 PAGE3=$3 PAGE4=$4
 
