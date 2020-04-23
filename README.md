@@ -3,7 +3,7 @@ Opens and refreshes web pages automatically on local or remote devices (OSX).
 
 By default the pages are shown side-by-side and refreshed once per minute.
 
-Can be setup to rotate urls in full-screen (5s interval)
+Can be setup to rotate urls in full-screen.
 
 Every one hour Chrome is rebooted.
 
