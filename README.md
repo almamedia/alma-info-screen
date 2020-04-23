@@ -2,6 +2,7 @@
 Opens and refreshes web pages automatically on local or remote devices (OSX).
 
 By default the pages are shown side-by-side and refreshed once per minute.
+Can be setup to rotate urls in full-screen (5s interval)
 
 Every one hour Chrome is rebooted.
 
@@ -17,11 +18,20 @@ Every one hour Chrome is rebooted.
 * If already cloned, pull the latest changes: `git pull`
 
 # Setup
-To install run the following script (1-4 pages as parameters):
+## Split screen
+To install split screen run the following script (1-4 pages as parameters):
 
 `./setup.sh https://example.com https://example2.com`
 
 The pages should pop up and start refreshing automatically.
+If the pages are not aligned correctly just drag them to the correct places.
+
+## Tab rotate
+To install tab rotate run the following script (2-20 pages as parameters):
+
+`TYPE=ROTATE ./setup.sh https://example.com https://example2.com https://example3.com https://example4.com`
+
+The first page should open in full-screen, and urls should start rotating in one minute with 5s interval.
 If the pages are not aligned correctly just drag them to the correct places.
 
 ## Remote setup
