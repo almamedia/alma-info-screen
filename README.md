@@ -27,7 +27,6 @@ To install split screen run the following script (1-4 pages as parameters):
 The pages should pop up and start refreshing automatically.
 If the pages are not aligned correctly just drag them to the correct places.
 
-### Timer
 Use TIMER variable to set the refresh interval in minutes, if set to zero then no refresh is used.
 
 Default timer for split screen is one minute.
@@ -41,8 +40,7 @@ To install tab rotate run the following script (2-20 pages as parameters):
 
 The first page should open in full-screen, and urls should start rotating in one minute with 5s interval.
 
-### Timer
-If timer is used with **TYPE=ROTATE**, it specifies seconds, not minutes.
+If TIMER is used with **TYPE=ROTATE**, it specifies seconds, not minutes.
 
 Default timer for tab rotate is 5 seconds.
 
@@ -55,9 +53,6 @@ Scripts can be run on a remote machine, by prepending the TARGET and USER enviro
 `TARGET=128.128.128.128 USER=exampleuser ./setup.sh https://example.com https://example2.com`
 
 `TARGET=128.128.128.128 USER=exampleuser TIMER=0 ./setup.sh https://example.com https://example2.com`
-
-
-
 
 # After setup:
 * Accept cookies
