@@ -3,8 +3,8 @@
 # Install browser refresh scripts for the provided urls
 
 # Install cron to run the script
-echo "TYPE=$TYPE @reboot sleep 120 && ${INSTALL_PATH}/open_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20}  >/dev/null 2>&1" >> tmp_cron
-echo "TYPE=$TYPE 00 * * * * ${INSTALL_PATH}/open_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20} >/dev/null 2>&1" >> tmp_cron
+echo "@reboot sleep 120 && TYPE=$TYPE ${INSTALL_PATH}/open_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20}  >/dev/null 2>&1" >> tmp_cron
+echo "00 * * * * TYPE=$TYPE ${INSTALL_PATH}/open_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20} >/dev/null 2>&1" >> tmp_cron
 
 if [ -z "$TYPE" ]; then
   # Use default timer if timer is not set
@@ -16,7 +16,11 @@ if [ -z "$TYPE" ]; then
     echo "*/${TIMER} * * * * ${INSTALL_PATH}/refresh_pages.sh >/dev/null 2>&1" >> tmp_cron
   fi
 else
-  echo "TIMER=$TIMER * * * * * ${INSTALL_PATH}/rotate_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20} >/dev/null 2>&1" >> tmp_cron
+  if [ -z "$TIMER" ]; then
+    echo "* * * * * ${INSTALL_PATH}/rotate_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20} >/dev/null 2>&1" >> tmp_cron
+  else
+    echo "* * * * * TIMER=${TIMER} ${INSTALL_PATH}/rotate_pages.sh ${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9} ${p10} ${p11} ${p12} ${p13} ${p14} ${p15} ${p16} ${p17} ${p18} ${p19} ${p20} >/dev/null 2>&1" >> tmp_cron
+  fi
 fi
 
 

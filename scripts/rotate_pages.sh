@@ -4,8 +4,6 @@ set timer to system attribute "TIMER"
 
 if timer is "" then
     set timer to 5
-else
-		set loopLength to 60 / timer
 end if
 
 set loopLength to 60 / timer
