@@ -7,6 +7,9 @@ Can be setup to rotate urls in full-screen.
 
 Every one hour Chrome is rebooted.
 
+Ask Tero Virolainen for list of IP-addresses for the info-screen machines.
+Use Screen Sharing or SSH to connect to them.
+
 # Requirements
 ## Remote machine:
 * Install Google Chrome
